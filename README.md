@@ -3,7 +3,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/jarlex/angoo">
-    <img src="images/owl.jpg" alt="Logo" width="80" height="80">
+    <img src="images/logo.png" alt="Logo" width="120" height="120">
   </a>
   <h3 align="center">Angōo</h3>
 </p>
