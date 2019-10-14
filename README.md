@@ -5,7 +5,7 @@
   <a href="https://github.com/jarlex/angoo">
     <img src="images/logo.png" alt="Logo" width="120" height="120">
   </a>
-  <h3 align="center">Angōo</h3>
+  <h3 align="center">Go-Vent</h3>
 </p>
 
 
@@ -15,6 +15,7 @@
 
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
+  * [Dependencies](#dependencies)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
@@ -29,23 +30,33 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-TBD
+Go-Vent is a synchronous event distribution system between different microservices.
+
+Configurable through database and customizable through plugins.
 
 ### Built With
-TBD
+We use Golang as the base language and docker images are provided for deployment.
 
+Use go mod as dependencies manager.
+
+### Dependencies
+TBD
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
-TBD
+```bash
+#Installation by source
+go get github.com/jarlex/govent
+cd $GO_PATH/github.com/jarlex/govent
+./build.sh
+
+#Download image
+docker pull #TBD
+```
 
 ### Prerequisites
-TBD
-
-```sh
-go build -buildmode=plugin -o loggingplugin.so loggingplugin/loggingplugin.go
-```
+* Golang 1.12.5
 
 ### Installation
 TBD
