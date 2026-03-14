@@ -1,0 +1,39 @@
+# Example trigger configuration for govent
+# Copy this file to triggers.yaml and customize for your needs
+
+triggers:
+  # Example: Send notification when a user is created
+  - name: notify-user-created
+    eventType: user.created
+    matchers:
+      source: auth-service
+    actions:
+      - type: rest
+        config:
+          url: http://localhost:8080/webhooks/user-created
+          method: POST
+          headers:
+            Content-Type: application/json
+            X-Event-Source: govent
+          timeout: 30
+
+  # Example: Log all payment events
+  - name: log-payment-events
+    eventType: payment.completed
+    actions:
+      - type: rest
+        config:
+          url: http://localhost:9090/logs
+          method: POST
+          timeout: 10
+
+  # Example: gRPC notification
+  - name: grpc-notification
+    eventType: order.created
+    actions:
+      - type: grpc
+        config:
+          address: localhost:50051
+          service: Notifier
+          method: Notify
+          timeout: 30
